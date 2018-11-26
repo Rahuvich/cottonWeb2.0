@@ -32,9 +32,10 @@
     text-align: center;
     padding: 1rem;
 }
-
-header{
+@media only screen and (min-width: 768px) {
+    header{
     height: 200px;
+}
 }
 
 .contenido {
@@ -50,7 +51,7 @@ header{
     left:0;
     width: 100%;
     bottom: 0;
-    height: 150px;
+    min-height: 150px;
 }
 
 .container {
