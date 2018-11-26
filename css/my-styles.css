@@ -1,0 +1,66 @@
+.letter-spacing-l{
+    letter-spacing: .75rem;
+}
+.primary{
+    color: rgb(0, 163, 221) !important;
+}
+
+.secondary{
+    color: rgb(58, 117, 196) !important;
+}
+
+.bg-primary{
+    background-color: rgb(0, 163, 221) !important; 
+}
+
+.border-primary {
+    border-color: rgb(0, 163, 221) !important;
+  }
+  
+.border-secondary {
+    border-color: rgb(58, 117, 196) !important;
+}
+
+
+.navbar-dark .navbar-nav .active{
+    background-color: rgb(58, 117, 196);
+}
+
+.navbar-nav a{
+    width: 12rem;
+    color: #ffffff !important;
+    text-align: center;
+    padding: 1rem;
+}
+
+header{
+    height: 200px;
+}
+
+.contenido {
+    background-image: url(../img/decorado_logo.png);
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    min-height: calc(100vh - 350px);
+}
+
+.footer{
+    right: 0;
+    left:0;
+    width: 100%;
+    bottom: 0;
+    height: 150px;
+}
+
+.container {
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+.navbar-nav a:hover{
+    background-color: rgb(58, 117, 196);
+}
