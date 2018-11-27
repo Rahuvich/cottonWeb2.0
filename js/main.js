@@ -5,5 +5,3 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 L.marker([41.462283, 2.269219]).addTo(map)
-    .bindPopup('Estamos aquí!')
-    .openPopup();

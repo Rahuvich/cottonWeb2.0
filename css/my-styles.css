@@ -32,31 +32,13 @@
     text-align: center;
     padding: 1rem;
 }
-@media only screen and (min-width: 768px) {
-    header{
-    height: 150px;
-}
-}
-@media only screen and (min-width: 768px) {
-    .map{
-        width: 100vh;
-        height: 30vh;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .map{
-        width: 50vh;
-        height: 30vh;
-    }
-}
 
 .contenido {
     background-image: url(../img/decorado_logo.png);
     background-size: 40%;
     background-repeat: no-repeat;
     background-position: right bottom;
-    min-height: calc(100vh - 300px);
+    min-height: calc(100vh - 275px);
 }
 
 
@@ -65,7 +47,7 @@
     left:0;
     width: 100%;
     bottom: 0;
-    min-height: 150px;
+    min-height: 100px;
 }
 
 .container {
@@ -78,4 +60,38 @@
 
 .navbar-nav a:hover{
     background-color: rgb(58, 117, 196);
+}
+
+html {
+    font-size: 1rem !important;
+}
+
+/*  >md */
+@media screen and (min-width: 768px) {
+    header{
+        height: 150px;
+    }
+    .map{
+        width: 100vh;
+        height: 30vh;
+    }
+}
+
+/*  <md */
+@media screen and (max-width: 768px) {
+    html{
+        font-size: .8rem !important;
+    }
+
+    .map{
+        width: 50vh;
+        height: 30vh;
+    }
+}
+
+/*  <sm */
+@media screen and (max-width: 576px) {
+    html{
+        font-size: .6rem !important;
+    }
 }
