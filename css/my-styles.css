@@ -83,6 +83,10 @@ html {
         font-size: .8rem !important;
     }
 
+    .contenido {
+        min-height: calc(100vh - 150px);
+    }
+
     .map{
         width: 50vh;
         height: 30vh;
