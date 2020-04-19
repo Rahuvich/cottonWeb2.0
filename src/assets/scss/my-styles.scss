@@ -1,0 +1,104 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+
+$primary-blue: rgb(0, 163, 221);
+$secondary-blue: rgb(58, 117, 196);
+
+.letter-spacing-l {
+  letter-spacing: 0.75rem;
+}
+.primary {
+  color: $primary-blue !important;
+}
+
+.secondary {
+  color: $secondary-blue !important;
+}
+
+.bg-primary {
+  background-color: $primary-blue !important;
+}
+
+.border-primary {
+  border-color: $primary-blue !important;
+}
+
+.border-secondary {
+  border-color: $secondary-blue !important;
+}
+
+.navbar-dark .navbar-nav .active {
+  background-color: $secondary-blue;
+}
+
+.navbar-nav a {
+  width: 12rem;
+  color: #ffffff !important;
+  text-align: center;
+  padding: 1rem;
+}
+
+.header {
+  height: 15vh;
+}
+
+.contenido {
+  background-image: url(../img/decorado_logo.png);
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  min-height: 70vh;
+}
+
+.footer {
+  right: 0;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  min-height: 15vh;
+}
+
+.container {
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.navbar-nav a:hover {
+  background-color: $secondary-blue;
+}
+
+body {
+  font-size: 1rem !important;
+}
+
+/*  >md */
+@media screen and (min-width: 768px) {
+  header {
+    height: 150px;
+  }
+  .map {
+    width: 100vh;
+    height: 30vh;
+  }
+}
+
+/*  <md */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 0.8rem !important;
+  }
+
+  .map {
+    width: 50vh;
+    height: 30vh;
+  }
+}
+
+/*  <sm */
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 0.6rem !important;
+  }
+}
