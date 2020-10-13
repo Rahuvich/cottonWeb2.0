@@ -1,8 +1,33 @@
 import React from "react"
 import Link from "gatsby-link"
+import { useStaticQuery, graphql } from "gatsby"
 
-function Footer({ data }) {
-  console.log(data)
+function Footer() {
+  const data = useStaticQuery(
+    graphql`
+    query {
+      allMarkdownRemark {
+        nodes {
+          html
+          excerpt
+          frontmatter {
+            title
+            code
+            correo
+            direccion
+            fax
+            movil
+            outro
+            telefono
+          }
+        }
+      }
+    }
+    `
+  )
+
+  const myData = data.allMarkdownRemark.nodes.find(node => node.frontmatter.code === 'contacto');
+
   return (
     <div className="footer bg-primary my-auto">
       <div className="container pt-3 pb-3">
@@ -15,15 +40,15 @@ function Footer({ data }) {
             <small className="text-white">Lavandería Cotton</small>
             <br />
             <small className="text-white">
-              {data.site.siteMetadata.direccion}
+              {myData.frontmatter.direccion}
             </small>
           </div>
           <div className="col-sm-6 col-md-4">
             <small className="text-white">
-              Tel: {data.site.siteMetadata.telefono}
-              <br /> Móvil: {data.site.siteMetadata.movil}
-              <br /> Fax: {data.site.siteMetadata.fax}
-              <br /> E-mail: {data.site.siteMetadata.correo}
+              Tel: {myData.frontmatter.telefono}
+              <br /> Móvil: {myData.frontmatter.movil}
+              <br /> Fax: {myData.frontmatter.fax}
+              <br /> E-mail: {myData.frontmatter.correo}
             </small>
           </div>
           <div className="col-sm-6 col-md-4">
@@ -41,16 +66,3 @@ function Footer({ data }) {
 
 export default Footer
 
-export const query = graphql`
-  query contactInfoFooter {
-    site {
-      siteMetadata {
-        direccion
-        telefono
-        fax
-        correo
-        movil
-      }
-    }
-  }
-`

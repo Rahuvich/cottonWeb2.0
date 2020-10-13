@@ -19,9 +19,10 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `backgrounds`,
-        path: `${__dirname}/src/assets/img`, // wherever background images are stored
+        name: `src`,
+        path: `${__dirname}/src`, // wherever background images are stored
       },
     },
+    `gatsby-transformer-remark`,
   ],
 }

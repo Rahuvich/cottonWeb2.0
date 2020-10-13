@@ -1,8 +1,13 @@
 import React from "react"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
+import { graphql } from "gatsby"
 
-function Presentacion() {
+function Presentacion({ data }) {
+
+  const myData = data.allMarkdownRemark.edges.find(({ node }) => node.frontmatter.code === 'presentacion');
+
+
   return (
     <div>
       <Header active="presentacion" />
@@ -10,25 +15,13 @@ function Presentacion() {
         <div className="container py-5">
           <div className="row">
             <div className="col border-bottom border-primary primary">
-              <h4 className="text-uppercase text-center">Quiénes somos</h4>
+              <h4 className="text-uppercase text-center">{myData.node.frontmatter.title}</h4>
             </div>
           </div>
           <div className="row">
             <div className="col-12 mt-5 text-justify secondary">
-              <div className="lead">
-                Lavandería COTTON (sucesora de Lavandería Godoy desde 2006) es
-                una empresa de servicios de lavado y planchado industrial en las
-                comarcas del Barcelonés y Maresme (Barcelona).
-                <br />
-                <br />
-                El equipo directivo de Lavandería COTTON presenta una amplia
-                experiencia en el manejo de equipos, control de procesos
-                industriales y optimización energética de instalaciones. La
-                aplicación de estos conocimientos conjuntamente con la
-                experiencia del personal del taller han dado como resultado una
-                mejora de la productividad, un ahorro de agua y energía y unos
-                acabados de calidad que revierten en una mayor duración de la
-                ropa.
+              <div className="lead" dangerouslySetInnerHTML={{ __html: myData.node.html }}>
+
               </div>
             </div>
           </div>
@@ -40,3 +33,21 @@ function Presentacion() {
 }
 
 export default Presentacion
+
+export const query = graphql`
+  query {
+    allMarkdownRemark {
+      totalCount
+      edges {
+        node {
+          html
+          frontmatter {
+            title
+            code
+          }
+          excerpt
+        }
+      }
+    }
+  }
+`

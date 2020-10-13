@@ -2,9 +2,10 @@ import React from "react"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import BackgroundSlider from "gatsby-image-background-slider"
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
-function Instalaciones() {
+function Instalaciones({ data }) {
+  const myData = data.allMarkdownRemark.edges.find(({ node }) => node.frontmatter.code === 'instalaciones');
   return (
     <div>
       <Header active="instalaciones" />
@@ -12,7 +13,7 @@ function Instalaciones() {
         <div class="container py-5">
           <div class="row">
             <div class="col border-bottom border-primary primary">
-              <h4 class="text-uppercase text-center">Instalaciones</h4>
+              <h4 class="text-uppercase text-center">{myData.node.frontmatter.title}</h4>
             </div>
           </div>
           <div class="row">
@@ -45,3 +46,22 @@ function Instalaciones() {
 }
 
 export default Instalaciones
+
+
+export const query = graphql`
+  query {
+    allMarkdownRemark {
+      totalCount
+      edges {
+        node {
+          html
+          frontmatter {
+            title
+            code
+          }
+          excerpt
+        }
+      }
+    }
+  }
+`
