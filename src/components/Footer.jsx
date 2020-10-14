@@ -5,31 +5,33 @@ import { useStaticQuery, graphql } from "gatsby"
 function Footer() {
   const data = useStaticQuery(
     graphql`
-    query {
-      allMarkdownRemark {
-        nodes {
-          html
-          excerpt
-          frontmatter {
-            title
-            code
-            correo
-            direccion
-            fax
-            movil
-            outro
-            telefono
+      query {
+        allMarkdownRemark {
+          nodes {
+            html
+            excerpt
+            frontmatter {
+              title
+              code
+              correo
+              direccion
+              fax
+              movil
+              outro
+              telefono
+            }
           }
         }
       }
-    }
     `
   )
 
-  const myData = data.allMarkdownRemark.nodes.find(node => node.frontmatter.code === 'contacto');
+  const myData = data.allMarkdownRemark.nodes.find(
+    node => node.frontmatter.code === "contacto"
+  )
 
   return (
-    <div className="footer bg-primary my-auto">
+    <div className="footer bg-primary my-auto mx-auto">
       <div className="container pt-3 pb-3">
         <div className="row">
           <div className="col-sm-6 col-md-4">
@@ -39,9 +41,7 @@ function Footer() {
             <br />
             <small className="text-white">Lavandería Cotton</small>
             <br />
-            <small className="text-white">
-              {myData.frontmatter.direccion}
-            </small>
+            <small className="text-white">{myData.frontmatter.direccion}</small>
           </div>
           <div className="col-sm-6 col-md-4">
             <small className="text-white">
@@ -52,10 +52,11 @@ function Footer() {
             </small>
           </div>
           <div className="col-sm-6 col-md-4">
-            <Link className="text-white" to="./avisolegal">
+            <Link className="text-white" to="/avisolegal">
               <small>
                 <u>Aviso legal</u>
               </small>
+              Lavanderia COTTON (SERLAPLAN SL)
             </Link>
           </div>
         </div>
@@ -65,4 +66,3 @@ function Footer() {
 }
 
 export default Footer
-

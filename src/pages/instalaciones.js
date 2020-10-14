@@ -1,52 +1,20 @@
 import React from "react"
-import Header from "../components/Header"
-import Footer from "../components/Footer"
-import BackgroundSlider from "gatsby-image-background-slider"
+import MainLayout from "../components/MainLayout"
 import { graphql } from "gatsby"
+import ImageSlider from "../components/ImageSlider"
 
 function Instalaciones({ data }) {
-  const myData = data.allMarkdownRemark.edges.find(({ node }) => node.frontmatter.code === 'instalaciones');
+  const myData = data.allMarkdownRemark.edges.find(
+    ({ node }) => node.frontmatter.code === "instalaciones"
+  )
   return (
-    <div>
-      <Header active="instalaciones" />
-      <main role="main" class="container-fluid contenido">
-        <div class="container py-5">
-          <div class="row">
-            <div class="col border-bottom border-primary primary">
-              <h4 class="text-uppercase text-center">{myData.node.frontmatter.title}</h4>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12 mt-5 text-justify secondary">
-              {/* <BackgroundSlider
-                query={useStaticQuery(graphql`
-                  query {
-                    backgrounds: allFile(
-                      filter: { sourceInstanceName: { eq: "backgrounds" } }
-                    ) {
-                      nodes {
-                        relativePath
-                        childImageSharp {
-                          fluid(maxWidth: 4000, quality: 100) {
-                            ...GatsbyImageSharpFluid
-                          }
-                        }
-                      }
-                    }
-                  }
-                `)}
-              /> */}
-            </div>
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </div>
+    <MainLayout title={myData.node.frontmatter.title} active="instalaciones">
+      <ImageSlider />
+    </MainLayout>
   )
 }
 
 export default Instalaciones
-
 
 export const query = graphql`
   query {

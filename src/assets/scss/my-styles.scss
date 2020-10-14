@@ -1,4 +1,5 @@
 @import "node_modules/bootstrap/scss/bootstrap";
+@import "~rfs/scss";
 
 $primary-blue: rgb(0, 163, 221);
 $secondary-blue: rgb(58, 117, 196);
@@ -26,24 +27,24 @@ $secondary-blue: rgb(58, 117, 196);
   border-color: $secondary-blue !important;
 }
 
-.navbar-dark .navbar-nav .active {
+.col.active {
   background-color: $secondary-blue;
 }
 
+.leaflet-container {
+  height: 400px;
+  width: 100%;
+}
+
 .navbar-nav a {
-  width: 12rem;
   color: #ffffff !important;
   text-align: center;
   padding: 1rem;
 }
 
-.header {
-  height: 15vh;
-}
-
 .contenido {
   background-image: url(../img/decorado_logo.png);
-  background-size: 40%;
+  background-size: 60% 100%;
   background-repeat: no-repeat;
   background-position: right bottom;
   min-height: 70vh;
@@ -70,13 +71,34 @@ $secondary-blue: rgb(58, 117, 196);
 }
 
 body {
-  font-size: 1rem !important;
+  height: auto;
+  @include font-size(1rem);
+  .lead {
+    @include font-size(1.5rem);
+  }
+}
+
+.imageSlider {
+  display: block;
+  width: auto;
+  height: auto;
+}
+
+$imgSize: 100px;
+
+.logoCotton {
+  height: imgSize;
+  width: imgSize;
+}
+
+.display-4 {
+  @include font-size(3rem);
 }
 
 /*  >md */
 @media screen and (min-width: 768px) {
-  header {
-    height: 150px;
+  .header {
+    height: 15vh;
   }
   .map {
     width: 100vh;
@@ -86,8 +108,13 @@ body {
 
 /*  <md */
 @media screen and (max-width: 768px) {
-  html {
-    font-size: 0.8rem !important;
+  .contenido {
+    background-size: 80% 60%;
+    min-height: 80vh;
+  }
+
+  .navbar-nav a {
+    width: 100%;
   }
 
   .map {
@@ -98,7 +125,4 @@ body {
 
 /*  <sm */
 @media screen and (max-width: 576px) {
-  html {
-    font-size: 0.6rem !important;
-  }
 }

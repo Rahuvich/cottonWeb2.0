@@ -17,7 +17,7 @@ function Header(props) {
             />
           </div>
           <div className="col-11 pl-5">
-            <h1 className="display-4 text-uppercase primary letter-spacing-l">
+            <h1 className="display-4 text-uppercase primary letter-spacing-l ml-5">
               lavandería cotton
             </h1>
           </div>
