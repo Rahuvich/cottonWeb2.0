@@ -1,0 +1,10 @@
+{
+  "title": "Website for Lavandería Cotton",
+  "version": "1.0",
+  "tag_tools": ["gatsby", "graphql", "nodeJS"],
+  "platforms": ["Web"],
+  "link_images": [
+    "https://res.cloudinary.com/mabe-portfolio/image/upload/v1602689807/cotton/mock.png"
+  ],
+  "private": false
+}
