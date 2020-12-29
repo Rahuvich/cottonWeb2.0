@@ -31,20 +31,20 @@ function Footer() {
   )
 
   return (
-    <div className="footer bg-primary my-auto mx-auto">
+    <div className="footer bg-primary my-auto mx-auto text-white">
       <div className="container pt-3 pb-3">
         <div className="row">
           <div className="col-sm-6 col-md-4">
-            <span className="text-white">
+            <span >
               <b>Sobre nosotros</b>
             </span>
             <br />
-            <small className="text-white">Lavandería Cotton</small>
+            <small >Lavandería Cotton</small>
             <br />
-            <small className="text-white">{myData.frontmatter.direccion}</small>
+            <small >{myData.frontmatter.direccion}</small>
           </div>
           <div className="col-sm-6 col-md-4">
-            <small className="text-white">
+            <small >
               Tel: {myData.frontmatter.telefono}
               <br /> Móvil: {myData.frontmatter.movil}
               <br /> Fax: {myData.frontmatter.fax}
@@ -56,8 +56,10 @@ function Footer() {
               <small>
                 <u>Aviso legal</u>
               </small>
-              Lavanderia COTTON (SERLAPLAN SL)
             </Link>
+            <div>
+              Lavanderia COTTON (SERLAPLAN SL)
+            </div>
           </div>
         </div>
       </div>

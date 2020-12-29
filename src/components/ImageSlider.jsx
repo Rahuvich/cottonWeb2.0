@@ -55,48 +55,48 @@ function ImageSlider() {
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src={Instalacion1} class="d-block w-100 imageSlider" alt="..." />
-                        <div class="carousel-caption d-none d-md-block">
+                        {/* <div class="carousel-caption d-none d-md-block">
                             <h5>{myData.frontmatter.first_slide_title}</h5>
                             <p>{myData.frontmatter.first_slide_description}</p>
-                        </div>
+                        </div> */}
                     </div>
                     <div class="carousel-item">
                         <img src={Instalacion2} class="d-block w-100 imageSlider" alt="..." />
-                        <div class="carousel-caption d-none d-md-block">
+                        {/* <div class="carousel-caption d-none d-md-block">
                             <h5>{myData.frontmatter.second_slide_title}</h5>
                             <p>{myData.frontmatter.second_slide_description}</p>
-                        </div>
+                        </div> */}
                     </div>
                     <div class="carousel-item">
                         <img src={Instalacion3} class="d-block w-100 imageSlider" alt="..." />
-                        <div class="carousel-caption d-none d-md-block">
+                        {/* <div class="carousel-caption d-none d-md-block">
                             <h5>{myData.frontmatter.third_slide_title}</h5>
                             <p>{myData.frontmatter.third_slide_description}</p>
-                        </div>
+                        </div> */}
                     </div>
 
                     <div class="carousel-item">
                         <img src={Instalacion4} class="d-block w-100 imageSlider" alt="..." />
-                        <div class="carousel-caption d-none d-md-block">
+                        {/* <div class="carousel-caption d-none d-md-block">
                             <h5>{myData.frontmatter.fourth_slide_title}</h5>
                             <p>{myData.frontmatter.fourth_slide_description}</p>
-                        </div>
+                        </div> */}
                     </div>
 
                     <div class="carousel-item">
                         <img src={Instalacion5} class="d-block w-100 imageSlider" alt="..." />
-                        <div class="carousel-caption d-none d-md-block">
+                        {/* <div class="carousel-caption d-none d-md-block">
                             <h5>{myData.frontmatter.fifth_slide_title}</h5>
                             <p>{myData.frontmatter.fifth_slide_description}</p>
-                        </div>
+                        </div> */}
                     </div>
 
                     <div class="carousel-item">
                         <img src={Instalacion6} class="d-block w-100 imageSlider" alt="..." />
-                        <div class="carousel-caption d-none d-md-block">
+                        {/* <div class="carousel-caption d-none d-md-block">
                             <h5>{myData.frontmatter.sixth_slide_title}</h5>
                             <p>{myData.frontmatter.sixth_slide_description}</p>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
