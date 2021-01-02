@@ -1,6 +1,6 @@
-import React from "react"
-import Link from "gatsby-link"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react";
+import Link from "gatsby-link";
+import { useStaticQuery, graphql } from "gatsby";
 
 function Footer() {
   const data = useStaticQuery(
@@ -24,47 +24,44 @@ function Footer() {
         }
       }
     `
-  )
+  );
 
   const myData = data.allMarkdownRemark.nodes.find(
-    node => node.frontmatter.code === "contacto"
-  )
+    (node) => node.frontmatter.code === "contacto"
+  );
 
   return (
-    <div className="footer bg-primary my-auto mx-auto text-white">
-      <div className="container pt-3 pb-3">
-        <div className="row">
-          <div className="col-sm-6 col-md-4">
-            <span >
-              <b>Sobre nosotros</b>
-            </span>
+    <div className="w-full flex flex-row justify-center bg-primary-blue text-white py-3">
+      <div className="max-w-screen-xl w-full flex flex-row">
+        <div className="flex flex-col flex-grow justify-start">
+          <b>Sobre nosotros</b>
+          <small>
+            Lavandería Cotton
             <br />
-            <small >Lavandería Cotton</small>
-            <br />
-            <small >{myData.frontmatter.direccion}</small>
-          </div>
-          <div className="col-sm-6 col-md-4">
-            <small >
-              Tel: {myData.frontmatter.telefono}
-              <br /> Móvil: {myData.frontmatter.movil}
-              <br /> Fax: {myData.frontmatter.fax}
-              <br /> E-mail: {myData.frontmatter.correo}
-            </small>
-          </div>
-          <div className="col-sm-6 col-md-4">
+            {myData.frontmatter.direccion}
+          </small>
+        </div>
+        <div className="flex flex-col flex-grow justify-start">
+          <b>Contacto</b>
+          <small>
+            Tel: {myData.frontmatter.telefono}
+            <br /> Móvil: {myData.frontmatter.movil}
+            <br /> Fax: {myData.frontmatter.fax}
+            <br /> E-mail: {myData.frontmatter.correo}
+          </small>
+        </div>
+        <div className="flex flex-col flex-grow justify-start">
+          <b>Más</b>
+          <small>
             <Link className="text-white" to="/avisolegal">
-              <small>
-                <u>Aviso legal</u>
-              </small>
+              <u>Aviso legal</u>
             </Link>
-            <div>
-              Lavanderia COTTON (SERLAPLAN SL)
-            </div>
-          </div>
+            <div>Lavanderia COTTON (SERLAPLAN SL)</div>
+          </small>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

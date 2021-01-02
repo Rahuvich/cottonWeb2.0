@@ -3,12 +3,29 @@ code: "actividad"
 title: "ACTIVIDAD"
 ---
 
-Nuestra actividad de lavandería industrial se dirige, principalmente, a empresas de hostelería, restauración, residencias, salas de masaje, gimnasios y Spas, así como vestuario laboral del sector industrial.
+Nuestra actividad de lavandería industrial se dirige, principalmente, a empresas de Hosteleria, Restauración, Apartamentos turísticos, Residencias, Salas de masaje, Gimnasios, Spas, Mutuas médicas, Centros de asistencia sanitaria y vestuario industrial.
 
-Complementamos nuestro servicio de lavandería con el alquiler de piezas textiles: mantelerías, sábanas, toallas, etc.
+En determinadas condiciones, complementamos nuestro servicio de lavandería con el alquiler de piezas textiles: mantelerías, sábanas, toallas, etc. Así mismo gestionamos la confección y compra de mantelería personalizada para los clientes que lo requieren.
 
-Nuestra calidad del servicio va acorde con la rapidez, de forma que garantizamos la entrega en 24 horas, y en casos urgentes con varios servicios diarios, incluso en días festivos.
+Nuestra calidad del servicio va acorde con la rapidez, de forma que en caso de urgencia garantizamos la entrega en 24 horas e incluso en días festivos.
 
-Nuestro personal conoce la ropa de nuestros clientes y sabe como debe ser tratada. Nos encargamos de la recogida, clasificación, lavado, secado, planchado, embolsado de la ropa ya limpia y, finalmente, realizamos la entrega en los plazos acordados con cada cliente.
+Nuestro personal conoce la ropa de nuestros clientes y sabe cómo debe ser tratada. Nos encargamos de la recogida, clasificación, lavado, secado, planchado, embolsado de la ropa ya limpia y, finalmente, realizamos la entrega en los plazos acordados con cada cliente.
 
-Gracias a nuestras líneas de trabajo duplicadas, en caso de avería, queda garantizado el normal funcionamiento de la instalación.
+Cada cliente se trata de forma personalizada, de manera que no se mezcla la ropa de los diferentes clientes y se reduce al mínimo la posibilidad de errores, intercambio de prendas, etc.
+
+Seguridad absoluta en el servicio: nuestras instalaciones cumplen toda la legislación vigente y disponemos de maquinaria duplicada de reserva que nos permite continuar prestando el servicio en caso de averías.
+
+<details>
+<summary>Proceso de lavado</summary>
+This is how you dropdown.
+</details>
+
+<details>
+<summary>Renting de ropa</summary>
+This is how you dropdown.
+</details>
+
+<details>
+<summary>Medios</summary>
+This is how you dropdown.
+</details>

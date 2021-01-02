@@ -1,8 +1,3 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
 
 module.exports = {
   siteMetadata: {
@@ -14,8 +9,13 @@ module.exports = {
     url: "https://www.cotton.es",
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [require("tailwindcss"), require('autoprefixer')]
+      },
+    },
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {

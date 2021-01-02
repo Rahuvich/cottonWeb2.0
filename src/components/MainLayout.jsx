@@ -1,31 +1,33 @@
-import React from "react"
-import Header from "../components/Header"
-import Footer from "../components/Footer"
-import CottonHelmet from "../components/Helmet"
+import React from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import CottonHelmet from "../components/Helmet";
 
 function MainLayout({ title, children, active }) {
   return (
-    <div>
+    <div className="min-h-screen">
       <CottonHelmet />
-      <Header active={active} />
-      <main role="main" class="container-fluid contenido">
-        <div class="container mt-lg-4 pt-4 py-lg-5">
-          <div class="row">
-            <div class="col border-bottom border-primary primary">
-              <h4 class="text-uppercase text-center">{title}</h4>
+      <div className="nav-content-footer min-h-screen">
+        <Header active={active} />
+        <main className="flex flex-row justify-center text-secondary-blue">
+          <div className="max-w-screen-xl">
+            <div className="flex flex-row">
+              <div className="flex flex-col w-full border-b border-primary-blue text-primary-blue my-10">
+                <h2 className="uppercase text-center">{title}</h2>
+              </div>
+            </div>
+            <div className="flex flex-row">
+              <div className="m-5 text-justify text-2xl font-light">
+                {children}
+              </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-12 mt-5 text-justify secondary">
-              <div class="lead">{children}</div>
-            </div>
-          </div>
-        </div>
-      </main>
+        </main>
 
-      <Footer />
+        <Footer />
+      </div>
     </div>
-  )
+  );
 }
 
-export default MainLayout
+export default MainLayout;
