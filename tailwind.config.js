@@ -6,11 +6,14 @@ module.exports = {
       colors: {
         'primary-blue': '#00a3dd',
         'secondary-blue': '#3a75c4',
-      }
+      },
+      height: {
+        'almost-screen': "45rem"
+      },
+      backgroundImage: theme => ({
+        'decorated':"url('../img/decorado_logo.png')",
+      })
     },
-    backgroundImage: theme => ({
-      'decorated':"url('../img/decorado_logo.png')",
-    })
   },
   variants: {
     extend: {},
