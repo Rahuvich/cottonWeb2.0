@@ -37,8 +37,12 @@
     @apply h-full w-full;
   }
 
+  summary {
+    @apply focus:outline-none;
+  }
+
   button {
-    @apply text-purple-500 bg-primary-blue;
+    @apply text-base;
   }
 
   p {
@@ -48,11 +52,5 @@
   .nav-content-footer {
     @apply grid;
     grid-template-rows: auto 1fr auto;
-  }
-}
-
-@layer components {
-  .icon {
-    @apply p-2 text-xl hover:opacity-50 cursor-pointer;
   }
 }

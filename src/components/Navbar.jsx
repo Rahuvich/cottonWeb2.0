@@ -10,7 +10,7 @@ function Navbar(props) {
           className={classNames(
             "flex flex-1 w-full justify-center p-4 hover:bg-secondary-blue text-center items-center",
             {
-              active: props.active === "index",
+              "bg-secondary-blue": props.active === "index",
             }
           )}
           to="/"
@@ -22,7 +22,7 @@ function Navbar(props) {
           className={classNames(
             "flex flex-1 w-full justify-center p-4 hover:bg-secondary-blue text-center items-center",
             {
-              active: props.active === "presentacion",
+              "bg-secondary-blue": props.active === "presentacion",
             }
           )}
           to="/presentacion"
@@ -34,7 +34,7 @@ function Navbar(props) {
           className={classNames(
             "flex flex-1 w-full justify-center p-4 hover:bg-secondary-blue text-center items-center",
             {
-              active: props.active === "actividad",
+              "bg-secondary-blue": props.active === "actividad",
             }
           )}
           to="/actividad"
@@ -46,7 +46,7 @@ function Navbar(props) {
           className={classNames(
             "flex flex-1 w-full justify-center p-4 hover:bg-secondary-blue text-center items-center",
             {
-              active: props.active === "compromiso",
+              "bg-secondary-blue": props.active === "compromiso",
             }
           )}
           to="/compromiso"
@@ -58,7 +58,7 @@ function Navbar(props) {
           className={classNames(
             "flex flex-1 w-full justify-center p-4 hover:bg-secondary-blue text-center items-center",
             {
-              active: props.active === "contacto",
+              "bg-secondary-blue": props.active === "contacto",
             }
           )}
           to="/contacto"
@@ -70,18 +70,7 @@ function Navbar(props) {
           className={classNames(
             "flex flex-1 w-full justify-center p-4 hover:bg-secondary-blue text-center items-center",
             {
-              active: props.active === "avisolegal",
-            }
-          )}
-          to="/contacto"
-        >
-          Aviso legal
-        </Link>
-        <Link
-          className={classNames(
-            "flex flex-1 w-full justify-center p-4 hover:bg-secondary-blue text-center items-center",
-            {
-              active: props.active === "instalaciones",
+              "bg-secondary-blue": props.active === "instalaciones",
             }
           )}
           to="/instalaciones"

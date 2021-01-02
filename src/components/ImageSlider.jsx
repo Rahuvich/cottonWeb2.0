@@ -1,153 +1,192 @@
-import React from "react";
+import React, { useState } from "react";
 import Instalacion1 from "../assets/bg_instalaciones/instalaciones-1.jpg";
 import Instalacion2 from "../assets/bg_instalaciones/instalaciones-2.jpg";
 import Instalacion3 from "../assets/bg_instalaciones/instalaciones-3.jpg";
 import Instalacion4 from "../assets/bg_instalaciones/instalaciones-4.jpg";
 import Instalacion5 from "../assets/bg_instalaciones/instalaciones-5.jpg";
 import Instalacion6 from "../assets/bg_instalaciones/instalaciones-6.jpg";
-import { useStaticQuery, graphql } from "gatsby";
+import Instalacion7 from "../assets/bg_instalaciones/instalaciones-7.jpg";
+import Instalacion8 from "../assets/bg_instalaciones/instalaciones-8.jpg";
+import Instalacion9 from "../assets/bg_instalaciones/instalaciones-9.jpg";
+import Instalacion10 from "../assets/bg_instalaciones/instalaciones-10.jpg";
+import Instalacion11 from "../assets/bg_instalaciones/instalaciones-11.jpg";
+import Instalacion12 from "../assets/bg_instalaciones/instalaciones-12.jpg";
+import Instalacion13 from "../assets/bg_instalaciones/instalaciones-13.jpg";
+import Instalacion14 from "../assets/bg_instalaciones/instalaciones-14.jpg";
+import Instalacion15 from "../assets/bg_instalaciones/instalaciones-15.jpg";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import classNames from "classnames";
 
 function ImageSlider() {
-  const data = useStaticQuery(
-    graphql`
-      query {
-        allMarkdownRemark {
-          nodes {
-            html
-            excerpt
-            frontmatter {
-              code
-              first_slide_title
-              second_slide_title
-              third_slide_title
-              fourth_slide_title
-              fifth_slide_title
-              sixth_slide_title
-              first_slide_description
-              second_slide_description
-              third_slide_description
-              fourth_slide_description
-              fifth_slide_description
-              sixth_slide_description
-            }
-          }
-        }
-      }
-    `
-  );
+  const [slideIndex, setSlideIndex] = useState(1);
 
-  const myData = data.allMarkdownRemark.nodes.find(
-    (node) => node.frontmatter.code === "instalaciones"
-  );
+  function plusDivs(n) {
+    n = slideIndex + n;
+
+    var x = document.getElementsByClassName("mySlides");
+
+    if (n > x.length) {
+      n = 1;
+    } else if (n < 1) {
+      n = x.length;
+    }
+
+    setSlideIndex(n);
+  }
 
   return (
-    <div className=" ">
+    <div className="flex flex-row items-stretch justify-center">
       <div
-        id="carouselExampleCaptions"
-        class="carousel slide"
-        data-ride="carousel"
+        className="p-5 flex flex-col justify-center cursor-pointer"
+        onClick={() => plusDivs(-1)}
       >
-        <ol class="carousel-indicators">
-          <li
-            data-target="#carouselExampleCaptions"
-            data-slide-to="0"
-            class="active"
-          ></li>
-          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-          <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
-          <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
-          <li data-target="#carouselExampleCaptions" data-slide-to="5"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src={Instalacion1}
-              class="d-block w-100 imageSlider"
-              alt="..."
-            />
-            {/* <div class="carousel-caption d-none d-md-block">
-                            <h5>{myData.frontmatter.first_slide_title}</h5>
-                            <p>{myData.frontmatter.first_slide_description}</p>
-                        </div> */}
-          </div>
-          <div class="carousel-item">
-            <img
-              src={Instalacion2}
-              class="d-block w-100 imageSlider"
-              alt="..."
-            />
-            {/* <div class="carousel-caption d-none d-md-block">
-                            <h5>{myData.frontmatter.second_slide_title}</h5>
-                            <p>{myData.frontmatter.second_slide_description}</p>
-                        </div> */}
-          </div>
-          <div class="carousel-item">
-            <img
-              src={Instalacion3}
-              class="d-block w-100 imageSlider"
-              alt="..."
-            />
-            {/* <div class="carousel-caption d-none d-md-block">
-                            <h5>{myData.frontmatter.third_slide_title}</h5>
-                            <p>{myData.frontmatter.third_slide_description}</p>
-                        </div> */}
-          </div>
-
-          <div class="carousel-item">
-            <img
-              src={Instalacion4}
-              class="d-block w-100 imageSlider"
-              alt="..."
-            />
-            {/* <div class="carousel-caption d-none d-md-block">
-                            <h5>{myData.frontmatter.fourth_slide_title}</h5>
-                            <p>{myData.frontmatter.fourth_slide_description}</p>
-                        </div> */}
-          </div>
-
-          <div class="carousel-item">
-            <img
-              src={Instalacion5}
-              class="d-block w-100 imageSlider"
-              alt="..."
-            />
-            {/* <div class="carousel-caption d-none d-md-block">
-                            <h5>{myData.frontmatter.fifth_slide_title}</h5>
-                            <p>{myData.frontmatter.fifth_slide_description}</p>
-                        </div> */}
-          </div>
-
-          <div class="carousel-item">
-            <img
-              src={Instalacion6}
-              class="d-block w-100 imageSlider"
-              alt="..."
-            />
-            {/* <div class="carousel-caption d-none d-md-block">
-                            <h5>{myData.frontmatter.sixth_slide_title}</h5>
-                            <p>{myData.frontmatter.sixth_slide_description}</p>
-                        </div> */}
-          </div>
+        <IoIosArrowBack />
+      </div>
+      <div className="flex justify-center items-center h-screen w-full relative select-none">
+        <div className="absolute top-0 right-0 p-5">
+          ({slideIndex}/{document.getElementsByClassName("mySlides").length})
         </div>
-        <a
-          class="carousel-control-prev"
-          href="#carouselExampleCaptions"
-          role="button"
-          data-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a
-          class="carousel-control-next"
-          href="#carouselExampleCaptions"
-          role="button"
-          data-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+        <img
+          className={classNames(
+            "mySlides rounded-lg h-screen w-full object-contain",
+            {
+              hidden: slideIndex !== 1,
+            }
+          )}
+          src={Instalacion1}
+        />
+        <img
+          className={classNames(
+            "mySlides rounded-lg h-screen w-full object-contain",
+            {
+              hidden: slideIndex !== 2,
+            }
+          )}
+          src={Instalacion2}
+        />
+        <img
+          className={classNames(
+            "mySlides rounded-lg h-screen w-full object-contain",
+            {
+              hidden: slideIndex !== 3,
+            }
+          )}
+          src={Instalacion3}
+        />
+        <img
+          className={classNames(
+            "mySlides rounded-lg h-screen w-full object-contain",
+            {
+              hidden: slideIndex !== 4,
+            }
+          )}
+          src={Instalacion4}
+        />
+        <img
+          className={classNames(
+            "mySlides rounded-lg h-screen w-full object-contain",
+            {
+              hidden: slideIndex !== 5,
+            }
+          )}
+          src={Instalacion5}
+        />
+        <img
+          className={classNames(
+            "mySlides rounded-lg h-screen w-full object-contain",
+            {
+              hidden: slideIndex !== 6,
+            }
+          )}
+          src={Instalacion6}
+        />
+        <img
+          className={classNames(
+            "mySlides rounded-lg h-screen w-full object-contain",
+            {
+              hidden: slideIndex !== 7,
+            }
+          )}
+          src={Instalacion7}
+        />
+        <img
+          className={classNames(
+            "mySlides rounded-lg h-screen w-full object-contain",
+            {
+              hidden: slideIndex !== 8,
+            }
+          )}
+          src={Instalacion8}
+        />
+        <img
+          className={classNames(
+            "mySlides rounded-lg h-screen w-full object-contain",
+            {
+              hidden: slideIndex !== 9,
+            }
+          )}
+          src={Instalacion9}
+        />
+        <img
+          className={classNames(
+            "mySlides rounded-lg h-screen w-full object-contain",
+            {
+              hidden: slideIndex !== 10,
+            }
+          )}
+          src={Instalacion10}
+        />
+        <img
+          className={classNames(
+            "mySlides rounded-lg h-screen w-full object-contain",
+            {
+              hidden: slideIndex !== 11,
+            }
+          )}
+          src={Instalacion11}
+        />
+        <img
+          className={classNames(
+            "mySlides rounded-lg h-screen w-full object-contain",
+            {
+              hidden: slideIndex !== 12,
+            }
+          )}
+          src={Instalacion12}
+        />
+        <img
+          className={classNames(
+            "mySlides rounded-lg h-screen w-full object-contain",
+            {
+              hidden: slideIndex !== 13,
+            }
+          )}
+          src={Instalacion13}
+        />
+        <img
+          className={classNames(
+            "mySlides rounded-lg h-screen w-full object-contain",
+            {
+              hidden: slideIndex !== 14,
+            }
+          )}
+          src={Instalacion14}
+        />
+        <img
+          className={classNames(
+            "mySlides rounded-lg h-screen w-full object-contain",
+            {
+              hidden: slideIndex !== 15,
+            }
+          )}
+          src={Instalacion15}
+        />
+      </div>
+      <div
+        className="p-5 flex flex-col justify-center cursor-pointer"
+        onClick={() => plusDivs(+1)}
+      >
+        <IoIosArrowForward />
       </div>
     </div>
   );

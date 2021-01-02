@@ -8,6 +8,9 @@ module.exports = {
         'secondary-blue': '#3a75c4',
       }
     },
+    backgroundImage: theme => ({
+      'decorated':"url('../img/decorado_logo.png')",
+    })
   },
   variants: {
     extend: {},

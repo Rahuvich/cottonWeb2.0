@@ -9,7 +9,7 @@ function MainLayout({ title, children, active }) {
       <CottonHelmet />
       <div className="nav-content-footer min-h-screen">
         <Header active={active} />
-        <main className="flex flex-row justify-center text-secondary-blue">
+        <main className="flex flex-row justify-center text-secondary-blue bg-decorated bg-no-repeat bg-contain bg-right-bottom">
           <div className="max-w-screen-xl">
             <div className="flex flex-row">
               <div className="flex flex-col w-full border-b border-primary-blue text-primary-blue my-10">
