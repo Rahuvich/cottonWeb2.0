@@ -30,7 +30,7 @@
   [type="radio"],
   textarea,
   select {
-    @apply bg-pink-200;
+    @apply placeholder-secondary-blue placeholder-opacity-50 bg-white border border-primary-blue rounded-lg focus:ring-1 ring-secondary-blue focus:outline-none outline-none;
   }
 
   body {
@@ -42,7 +42,7 @@
   }
 
   button {
-    @apply text-base;
+    @apply text-base focus:outline-none flex flex-row justify-center items-center uppercase flex-grow-0 px-4 py-2 rounded shadow border border-primary-blue text-primary-blue hover:text-white bg-white hover:bg-primary-blue;
   }
 
   p {

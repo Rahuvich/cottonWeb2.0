@@ -5,6 +5,7 @@ import { MdLocationCity, MdPhone, MdEmail } from "react-icons/md";
 import { FaFax } from "react-icons/fa";
 import { BsPhone } from "react-icons/bs";
 import CottonMap from "../components/Map";
+import ContactForm from "../components/forms/ContactForm";
 
 function Contact({ data }) {
   console.log(data);
@@ -14,39 +15,40 @@ function Contact({ data }) {
 
   return (
     <MainLayout title={myData.frontmatter.title} active="contacto">
-      <div class="col-12 text-justify secondary">
-        <div dangerouslySetInnerHTML={{ __html: myData.html }}></div>
+      <div dangerouslySetInnerHTML={{ __html: myData.html }}></div>
 
-        <div class="flex flex-col md:flex-row items-center">
-          <div class="order-12 md:order-1 py-2">
-            <MdLocationCity className="inline-block" />
-            &nbsp;&nbsp;
-            {myData.frontmatter.direccion}
-            <br />
-            <br />
-            <MdPhone className="inline-block" />
-            &nbsp;&nbsp;
-            {myData.frontmatter.telefono}
-            <br />
-            <BsPhone className="inline-block" />
-            &nbsp;&nbsp;
-            {myData.frontmatter.movil}
-            <br />
-            <FaFax className="inline-block" />
-            &nbsp;&nbsp;
-            {myData.frontmatter.fax}
-            <br />
-            <br />
-            <MdEmail className="inline-block" />
-            &nbsp;&nbsp;
-            {myData.frontmatter.correo}
-          </div>
-          <div class="order-2 w-full ml-5">
-            <CottonMap />
-          </div>
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="order-12 md:order-1 py-2">
+          <MdLocationCity className="inline-block" />
+          &nbsp;&nbsp;
+          {myData.frontmatter.direccion}
+          <br />
+          <br />
+          <MdPhone className="inline-block" />
+          &nbsp;&nbsp;
+          {myData.frontmatter.telefono}
+          <br />
+          <BsPhone className="inline-block" />
+          &nbsp;&nbsp;
+          {myData.frontmatter.movil}
+          <br />
+          <FaFax className="inline-block" />
+          &nbsp;&nbsp;
+          {myData.frontmatter.fax}
+          <br />
+          <br />
+          <MdEmail className="inline-block" />
+          &nbsp;&nbsp;
+          {myData.frontmatter.correo}
         </div>
-        <br />
-        <p>{myData.frontmatter.outro}</p>
+        <div class="order-2 w-full ml-5">
+          <CottonMap />
+        </div>
+      </div>
+      <br />
+      <p>{myData.frontmatter.outro}</p>
+      <div className="mt-16">
+        <ContactForm />
       </div>
     </MainLayout>
   );

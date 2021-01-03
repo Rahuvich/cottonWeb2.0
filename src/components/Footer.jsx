@@ -33,7 +33,7 @@ function Footer() {
   return (
     <div className="w-full flex flex-row justify-center bg-primary-blue text-white py-3">
       <div className="max-w-screen-xl w-full flex flex-row">
-        <div className="flex flex-col flex-grow justify-start">
+        <div className="flex flex-col flex-grow justify-start px-4">
           <b>Sobre nosotros</b>
           <small>
             Lavandería Cotton
@@ -41,7 +41,7 @@ function Footer() {
             {myData.frontmatter.direccion}
           </small>
         </div>
-        <div className="flex flex-col flex-grow justify-start">
+        <div className="flex flex-col flex-grow justify-start px-4">
           <b>Contacto</b>
           <small>
             Tel: {myData.frontmatter.telefono}
@@ -50,7 +50,7 @@ function Footer() {
             <br /> E-mail: {myData.frontmatter.correo}
           </small>
         </div>
-        <div className="flex flex-col flex-grow justify-start">
+        <div className="flex flex-col flex-grow justify-start px-4">
           <b>Más</b>
           <small>
             <Link className="text-white" to="/avisolegal">

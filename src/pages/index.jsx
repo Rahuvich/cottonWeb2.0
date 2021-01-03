@@ -12,22 +12,19 @@ export default ({ data }) => {
   );
   return (
     <MainLayout title={myData.node.frontmatter.title} active="index">
-      <div className="flex flex-row items-stretch">
+      <div className="flex flex-col md:flex-row items-stretch">
         <img
           src={Image}
-          className="border border-primary-blue rounded w-1/2"
+          className="border border-primary-blue rounded md:w-1/2"
           alt="Imagen"
         />
-        <div className="flex flex-col flex-grow px-5 items-end">
+        <div className="flex flex-col flex-grow py-5 md:py-0 md:px-5 items-end">
           <div
             className="h-full"
             dangerouslySetInnerHTML={{ __html: myData.node.html }}
           />
           <div>
-            <button
-              className="focus:outline-none flex flex-row justify-center items-center uppercase flex-grow-0 px-4 py-2 rounded shadow border border-primary-blue text-primary-blue hover:text-white bg-white hover:bg-primary-blue"
-              onClick={() => navigate("/contacto")}
-            >
+            <button onClick={() => navigate("/contacto")}>
               Contáctanos <IoIosArrowForward className="inline-block ml-2" />
             </button>
           </div>

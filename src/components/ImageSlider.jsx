@@ -45,10 +45,10 @@ function ImageSlider() {
 
     var x = document.getElementsByClassName("mySlides");
 
-    if (n > x.length) {
-      n = 1;
-    } else if (n < 1) {
-      n = x.length;
+    if (n > x.length - 1) {
+      n = 0;
+    } else if (n < 0) {
+      n = x.length - 1;
     }
 
     setSlideIndex(n);
@@ -64,7 +64,8 @@ function ImageSlider() {
       </div>
       <div className="flex justify-center items-center h-almost-screen w-full relative select-none">
         <div className="absolute top-0 right-0 p-5 bg-white bg-opacity-75">
-          ({slideIndex}/{document.getElementsByClassName("mySlides").length})
+          ({slideIndex}/{document.getElementsByClassName("mySlides").length - 1}
+          )
         </div>
         {images.map((image, index) => (
           <img
