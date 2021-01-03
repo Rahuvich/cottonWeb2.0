@@ -8,7 +8,6 @@ import CottonMap from "../components/Map";
 import ContactForm from "../components/forms/ContactForm";
 
 function Contact({ data }) {
-  console.log(data);
   const myData = data.allMarkdownRemark.nodes.find(
     (node) => node.frontmatter.code === "contacto"
   );
@@ -18,7 +17,7 @@ function Contact({ data }) {
       <div dangerouslySetInnerHTML={{ __html: myData.html }}></div>
 
       <div class="flex flex-col md:flex-row items-center">
-        <div class="order-12 md:order-1 py-2">
+        <div class="order-12 md:order-1 pt-10 md:py-2">
           <MdLocationCity className="inline-block" />
           &nbsp;&nbsp;
           {myData.frontmatter.direccion}

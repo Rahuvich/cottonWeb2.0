@@ -48,6 +48,10 @@ function Footer() {
             <br /> Móvil: {myData.frontmatter.movil}
             <br /> Fax: {myData.frontmatter.fax}
             <br /> E-mail: {myData.frontmatter.correo}
+            <br />
+            <Link className="text-white" to="/contacto">
+              <u>Formulario de contacto</u>
+            </Link>
           </small>
         </div>
         <div className="flex flex-col flex-grow justify-start px-4">

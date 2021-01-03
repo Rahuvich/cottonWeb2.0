@@ -1,14 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as yup from "yup";
 import classNames from "classnames";
 import { IoMdSend } from "react-icons/io";
+import ReactDOMServer from "react-dom/server";
 import {
+  ContactFormObject,
   InstitutionType,
   Periodicity,
   ClothType,
   Quantity,
+  MailObject,
 } from "../../@types";
+import MailTemplate from "../templates/mail";
+
+interface LocalState {
+  sended: boolean;
+  error: boolean;
+  msg: string;
+}
 
 function ContactForm() {
   const schema = yup.object({
@@ -27,6 +37,68 @@ function ContactForm() {
     comentario: yup.string(),
   });
 
+  const [state, setState] = useState({
+    sended: false,
+    error: false,
+    msg: "",
+  });
+
+  async function onSubmit(values: ContactFormObject, { resetForm }) {
+    const body: MailObject = {
+      from: {
+        email: "raulmateob@gmail.com",
+        name: "Lavandería Cotton Web",
+      },
+      to: {
+        email: "lavanderia@cotton.es",
+        name: "Lavandería Cotton",
+      },
+      subject: "Formulario Página Web",
+      textPart: JSON.stringify(values),
+      customId: values.email,
+      htmlPart: ReactDOMServer.renderToStaticMarkup(
+        <MailTemplate {...values} />
+      ),
+    };
+
+    const resp = await fetch("https://raulmabe.dev/api/mail/", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    });
+
+    const content = await resp.json();
+
+    if (content.Messages[0].Status === "success") {
+      setState({
+        sended: true,
+        error: false,
+        msg:
+          "¡Gracias por contactarnos! El mensaje se ha enviado correctamente.",
+      });
+    } else {
+      setState({
+        sended: true,
+        error: true,
+        msg:
+          "¡Ups! El mensaje no se ha enviado correctamente, inténtelo más tarde.",
+      });
+    }
+
+    resetForm();
+  }
+
+  if (state.sended) {
+    return (
+      <div className="flex flex-row justify-center text-center my-20">
+        <h1>{state.msg}</h1>
+      </div>
+    );
+  }
+
   return (
     <Formik
       initialValues={{
@@ -42,7 +114,7 @@ function ContactForm() {
         comentario: "",
       }}
       validationSchema={schema}
-      onSubmit={(data, { resetForm }) => console.log("Submitted")}
+      onSubmit={onSubmit}
     >
       {({ values, errors }) => (
         <Form className="flex flex-col">

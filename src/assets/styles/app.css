@@ -1,13 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,800;1,100;1,200;1,300;1,400;1,600&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   h1 {
-    @apply text-5xl;
+    @apply text-2xl md:text-5xl;
+    font-family: "Montserrat";
   }
   h2 {
-    @apply text-2xl;
+    @apply text-lg md:text-2xl;
   }
 
   h3 {
@@ -37,8 +40,20 @@
     @apply h-full w-full;
   }
 
-  summary {
-    @apply focus:outline-none;
+  details {
+    @apply text-base my-5;
+  }
+
+  strong {
+    @apply font-semibold;
+  }
+
+  li {
+    @apply my-2;
+  }
+
+  details summary {
+    @apply focus:outline-none text-xl font-bold cursor-pointer my-3;
   }
 
   button {

@@ -5,7 +5,7 @@ import LogoCotton from "../assets/img/logoCotton.jpg";
 function Header(props) {
   return (
     <div className="flex flex-col items-center">
-      <div className="hidden md:flex max-w-screen-xl w-full px-5">
+      <div className="hidden md:flex max-w-screen-xl w-full md:px-10 lg:px-20">
         <div className="flex flex-row items-center">
           <img
             src={LogoCotton}
@@ -14,7 +14,7 @@ function Header(props) {
             className="d-inline-block align-top my-2"
             alt="Cotton Logo"
           />
-          <h1 className="ml-32 uppercase text-primary-blue tracking-widest font-light">
+          <h1 className="ml-20 uppercase text-primary-blue tracking-widest font-light">
             lavandería cotton
           </h1>
         </div>

@@ -2150,6 +2150,11 @@
     "@types/node" "*"
     "@types/responselike" "*"
 
+"@types/classnames@^2.2.11":
+  version "2.2.11"
+  resolved "https://registry.yarnpkg.com/@types/classnames/-/classnames-2.2.11.tgz#2521cc86f69d15c5b90664e4829d84566052c1cf"
+  integrity sha512-2koNhpWm3DgWRp5tpkiJ8JGc1xTn2q0l+jUNUE7oMKXUf5NpI9AIdC4kbjGNFBdHtcxBD18LAksoudAVhFKCjw==
+
 "@types/common-tags@^1.8.0":
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/@types/common-tags/-/common-tags-1.8.0.tgz#79d55e748d730b997be5b7fce4b74488d8b26a6b"
@@ -2338,6 +2343,13 @@
   integrity sha512-RHYataCUPQnt+GHoASyRLq6wmZ0n8jWlBW8Lxcwd30NN6vQfbmTeoSDfkgxO0S1lEzArp8OFDsq5KIs7FygjtA==
   dependencies:
     "@types/history" "*"
+    "@types/react" "*"
+
+"@types/react-dom@^17.0.0":
+  version "17.0.0"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.0.tgz#b3b691eb956c4b3401777ee67b900cb28415d95a"
+  integrity sha512-lUqY7OlkF/RbNtD5nIq7ot8NquXrdFrjSOR6+w9a9RFQevGi1oZO1dcJbXMeONAPKtZ2UrZOEJ5UOCVsxbLk/g==
+  dependencies:
     "@types/react" "*"
 
 "@types/react@*":
@@ -14676,6 +14688,11 @@ tinycolor2@^1.1.2, tinycolor2@^1.4.1:
   version "1.4.2"
   resolved "https://registry.yarnpkg.com/tinycolor2/-/tinycolor2-1.4.2.tgz#3f6a4d1071ad07676d7fa472e1fac40a719d8803"
   integrity sha512-vJhccZPs965sV/L2sU4oRQVAos0pQXwsvTLkWYdqJ+a8Q5kPFzJTuOFwy7UniPli44NKQGAglksjvOcpo95aZA==
+
+tls@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/tls/-/tls-0.0.1.tgz#0ab2bf5968d71df2f8c0e1515d24a2240b98aac8"
+  integrity sha1-CrK/WWjXHfL4wOFRXSSiJAuYqsg=
 
 tmp@^0.0.33:
   version "0.0.33"

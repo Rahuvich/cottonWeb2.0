@@ -15,7 +15,7 @@ Cada cliente se trata de forma personalizada, de manera que no se mezcla la ropa
 
 Seguridad absoluta en el servicio: nuestras instalaciones cumplen toda la legislación vigente y disponemos de maquinaria duplicada de reserva que nos permite continuar prestando el servicio en caso de averías.
 
-<details>
+<!-- <details>
 <summary>Proceso de lavado</summary>
 This is how you dropdown.
 </details>
@@ -28,4 +28,4 @@ This is how you dropdown.
 <details>
 <summary>Medios</summary>
 This is how you dropdown.
-</details>
+</details> -->

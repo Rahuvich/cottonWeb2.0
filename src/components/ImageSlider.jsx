@@ -43,12 +43,10 @@ function ImageSlider() {
   function plusDivs(n) {
     n = slideIndex + n;
 
-    var x = document.getElementsByClassName("mySlides");
-
-    if (n > x.length - 1) {
+    if (n > images.length - 1) {
       n = 0;
     } else if (n < 0) {
-      n = x.length - 1;
+      n = images.length - 1;
     }
 
     setSlideIndex(n);
@@ -57,20 +55,19 @@ function ImageSlider() {
   return (
     <div className="flex flex-row items-stretch justify-center">
       <div
-        className="p-5 flex flex-col justify-center cursor-pointer"
+        className="p-5 flex flex-col justify-center cursor-pointer "
         onClick={() => plusDivs(-1)}
       >
         <IoIosArrowBack />
       </div>
-      <div className="flex justify-center items-center h-almost-screen w-full relative select-none">
+      <div className="flex justify-center items-center h-almost-screen w-full relative select-none bg-secondary-blue bg-opacity-25 rounded-lg">
         <div className="absolute top-0 right-0 p-5 bg-white bg-opacity-75">
-          ({slideIndex}/{document.getElementsByClassName("mySlides").length - 1}
-          )
+          ({slideIndex}/{images.length - 1})
         </div>
         {images.map((image, index) => (
           <img
             className={classNames(
-              "mySlides rounded-lg h-almost-screen w-full object-contain",
+              "mySlides h-almost-screen w-full object-contain",
               {
                 hidden: slideIndex !== index,
               }
