@@ -94,7 +94,7 @@ function ContactForm() {
   if (state.sended) {
     return (
       <div className="flex flex-row justify-center text-center my-20">
-        <h1>{state.msg}</h1>
+        <h2>{state.msg}</h2>
       </div>
     );
   }

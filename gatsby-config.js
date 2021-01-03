@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     title: "Lavandería Cotton",
     description:
-      "Lavandería Cotton SERVICIOS DE LAVADO PROFESIONAL PARA EMPRESAS Y COLECTIVOS",
+      "Lavandería COTTON ofrece servicios de lavado profesional para empresas y colectivos",
     keywords:
       "lavanderia, industrial, cotton, lavar, lavanderos, planchar, secar, ropa, telas",
     url: "https://www.cotton.es",
