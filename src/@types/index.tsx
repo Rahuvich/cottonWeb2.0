@@ -3,7 +3,6 @@ export interface ContactFormObject {
   poblacion: string;
   email: string;
   telefono: string;
-  nombre_establecimiento: string;
   tipo_establecimiento: InstitutionType;
   periodicidad: Periodicity;
   tipo_ropa: ClothType;

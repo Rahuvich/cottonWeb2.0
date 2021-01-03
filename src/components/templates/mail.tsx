@@ -24,10 +24,6 @@ function MailTemplate(props: ContactFormObject) {
         </p>
 
         <p>
-          <b>Nombre del establecimiento: </b> {props.nombre_establecimiento}
-        </p>
-
-        <p>
           <b>Tipo de establecimiento: </b> {props.tipo_establecimiento}
         </p>
 

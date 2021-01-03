@@ -26,7 +26,6 @@ function ContactForm() {
     poblacion: yup.string().required(),
     email: yup.string().required(),
     telefono: yup.string().required(),
-    nombre_establecimiento: yup.string().required(),
     tipo_establecimiento: yup
       .mixed()
       .oneOf(Object.values(InstitutionType))
@@ -106,7 +105,6 @@ function ContactForm() {
         poblacion: "",
         email: "",
         telefono: "",
-        nombre_establecimiento: "",
         tipo_establecimiento: InstitutionType.Hotel,
         periodicidad: Periodicity.Daily,
         tipo_ropa: ClothType.Manteleria,
@@ -172,18 +170,6 @@ function ContactForm() {
           </div>
 
           <div className="flex flex-row flex-wrap items-center pb-5">
-            <div className="flex flex-col m-2">
-              <label className="text-sm">Nombre del establecimiento*</label>
-              <Field
-                className={classNames({
-                  "border-red-400": errors.nombre_establecimiento,
-                })}
-                placeholder="Nombre del establecimiento"
-                type="text"
-                name="nombre_establecimiento"
-              />
-            </div>
-
             <div className="flex flex-col m-2">
               <label className="text-sm">Tipo de establecimiento*</label>
               <Field
