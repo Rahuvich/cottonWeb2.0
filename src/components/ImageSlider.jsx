@@ -1,20 +1,18 @@
 import React, { useState } from "react";
-import Instalacion0 from "../assets/bg_instalaciones/instalaciones-0.jpg";
-import Instalacion1 from "../assets/bg_instalaciones/instalaciones-1.jpg";
-import Instalacion2 from "../assets/bg_instalaciones/instalaciones-2.jpg";
-import Instalacion3 from "../assets/bg_instalaciones/instalaciones-3.jpg";
-import Instalacion4 from "../assets/bg_instalaciones/instalaciones-4.jpg";
-import Instalacion5 from "../assets/bg_instalaciones/instalaciones-5.jpg";
-import Instalacion6 from "../assets/bg_instalaciones/instalaciones-6.jpg";
-import Instalacion7 from "../assets/bg_instalaciones/instalaciones-7.jpg";
-import Instalacion8 from "../assets/bg_instalaciones/instalaciones-8.jpg";
-import Instalacion9 from "../assets/bg_instalaciones/instalaciones-9.jpg";
+import Instalacion0 from "../assets/bg_instalaciones/instalaciones-00.jpg";
+import Instalacion1 from "../assets/bg_instalaciones/instalaciones-01.jpg";
+import Instalacion2 from "../assets/bg_instalaciones/instalaciones-02.jpg";
+import Instalacion3 from "../assets/bg_instalaciones/instalaciones-03.jpg";
+import Instalacion4 from "../assets/bg_instalaciones/instalaciones-04.jpg";
+import Instalacion5 from "../assets/bg_instalaciones/instalaciones-05.jpg";
+import Instalacion6 from "../assets/bg_instalaciones/instalaciones-06.jpg";
+import Instalacion7 from "../assets/bg_instalaciones/instalaciones-07.jpg";
+import Instalacion8 from "../assets/bg_instalaciones/instalaciones-08.jpg";
+import Instalacion9 from "../assets/bg_instalaciones/instalaciones-09.jpg";
 import Instalacion10 from "../assets/bg_instalaciones/instalaciones-10.jpg";
 import Instalacion11 from "../assets/bg_instalaciones/instalaciones-11.jpg";
 import Instalacion12 from "../assets/bg_instalaciones/instalaciones-12.jpg";
 import Instalacion13 from "../assets/bg_instalaciones/instalaciones-13.jpg";
-import Instalacion14 from "../assets/bg_instalaciones/instalaciones-14.jpg";
-import Instalacion15 from "../assets/bg_instalaciones/instalaciones-15.jpg";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import classNames from "classnames";
 
@@ -34,8 +32,6 @@ function ImageSlider() {
     Instalacion11,
     Instalacion12,
     Instalacion13,
-    Instalacion14,
-    Instalacion15,
   ];
 
   const [slideIndex, setSlideIndex] = useState(0);

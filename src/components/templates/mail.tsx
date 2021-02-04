@@ -35,7 +35,7 @@ function MailTemplate(props: ContactFormObject) {
           <b>Tipo de ropa: </b> {props.tipo_ropa}
         </p>
         <p>
-          <b>Cantindad: </b> {props.cantidad}
+          <b>Cantidad: </b> {props.cantidad}
         </p>
         <p>
           <b>Comentario: </b> {props.comentario}
